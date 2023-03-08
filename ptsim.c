@@ -56,7 +56,6 @@ unsigned char get_page(void){            // AllocatePage():
 //
 void new_process(int proc_num, int page_count)
 {
-    NewProcess(proc_num, page_count):
     int page_table = get_page();                  // Get the page table page
     if (page_table == 0xff){                      // If the initial page table allocation fails (due to out-of-memory/0xff)
         printf("OOM: proc %d: page table\n", proc_num);
